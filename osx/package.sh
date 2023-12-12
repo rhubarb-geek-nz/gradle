@@ -17,10 +17,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
-# $Id: package.sh 279 2023-12-08 13:30:18Z rhubarb-geek-nz $
+# $Id: package.sh 287 2023-12-12 12:00:32Z rhubarb-geek-nz $
 #
 
-VERSION=7.6
+VERSION=8.5
 PKGNAME=gradle
 ZIPFILE="$PKGNAME-$VERSION-bin.zip"
 IDENTIFIER=nz.geek.rhubarb.gradle

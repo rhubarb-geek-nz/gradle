@@ -17,10 +17,10 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>
 #
-# $Id: package.ps1 285 2023-12-12 10:52:46Z rhubarb-geek-nz $
+# $Id: package.ps1 286 2023-12-12 11:58:18Z rhubarb-geek-nz $
 #
 
-$GRADLE_VERSION = "7.6"
+$GRADLE_VERSION = "8.5"
 $ZIPFILE = "gradle-$GRADLE_VERSION-bin.zip"
 $URL = "https://services.gradle.org/distributions/$ZIPFILE"
 $SRCDIR = "src/gradle-$GRADLE_VERSION"
@@ -56,14 +56,14 @@ If(!(test-path -PathType container $path))
 @'
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-  <Product Id="*" Name="Gradle 7.6" Language="1033" Version="7.6" Manufacturer="gradle.org" UpgradeCode="F0AEB720-5434-4801-8BC1-4BA35A6B7818">
-    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="x64" Description="Gradle build tool" Comments="Gradle 7.6" />
+  <Product Id="*" Name="Gradle 8.5" Language="1033" Version="8.5" Manufacturer="gradle.org" UpgradeCode="F0AEB720-5434-4801-8BC1-4BA35A6B7818">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="x64" Description="Gradle build tool" Comments="Gradle 8.5" />
     <MediaTemplate EmbedCab="yes" />
     <Feature Id="ProductFeature" Title="setup" Level="1">
       <ComponentGroupRef Id="ProductComponents" />
     </Feature>
     <Upgrade Id="{F0AEB720-5434-4801-8BC1-4BA35A6B7818}">
-      <UpgradeVersion Maximum="7.6" Property="OLDPRODUCTFOUND" OnlyDetect="no" IncludeMinimum="yes" IncludeMaximum="no" />
+      <UpgradeVersion Maximum="8.5" Property="OLDPRODUCTFOUND" OnlyDetect="no" IncludeMinimum="yes" IncludeMaximum="no" />
     </Upgrade>
     <InstallExecuteSequence>
       <RemoveExistingProducts After="InstallInitialize" />
@@ -74,7 +74,7 @@ If(!(test-path -PathType container $path))
   <Fragment>
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="ProgramFiles64Folder">
-        <Directory Id="INSTALLDIR" Name="Gradle 7.6">
+        <Directory Id="INSTALLDIR" Name="Gradle 8.5">
         </Directory>
       </Directory>
     </Directory>
